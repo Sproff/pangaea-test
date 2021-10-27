@@ -1,0 +1,73 @@
+@font-face {
+  font-family: "Bau Regula";
+  src: local("Bau Regular"),
+    url(./assets/fonts/bau-regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Freight Disp Book";
+  src: local("Freight Disp Book"),
+    url(./assets/fonts/Freight\ Disp\ Book.otf) format("opentype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1200px;
+  margin: 0 auto !important;
+  overflow-x: hidden;
+}
+
+@media (max-width: 991px) {
+  .navbar {
+    background-color: #fff;
+    width: 250px;
+    height: 100vh;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: 850ms;
+    z-index: 999;
+  }
+
+  .navbar.active {
+    left: 0;
+    transition: 350ms;
+    margin: 0;
+    padding: 0 1rem;
+    z-index: 9999999;
+  }
+}
+
+.sidebar {
+  background-color: #fff;
+  height: 100vh;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  transition: 850ms;
+  z-index: 999;
+}
+
+.sidebar.active {
+  right: 0;
+  transition: 350ms;
+  margin: 0;
+  padding: 0 1rem;
+  z-index: 9999999;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7c7c7c;
+}
