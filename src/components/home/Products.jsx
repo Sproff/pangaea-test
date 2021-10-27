@@ -12,7 +12,6 @@ import { GET_PRODUCTS } from "../../graphql/queries/GetProducts";
 import { StoreContext } from "../../contexts/StoreContext";
 import { updateCart } from "../../services/cart";
 import { Cart } from "../modal/Cart";
-import { Header } from "../../layouts/Header";
 
 export const Products = () => {
   const { error, loading, data } = useQuery(GET_PRODUCTS);
